@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-fuild bg-white d-flex mb-5 justify-content-between">
+        <div class="d-flex pt-1" style="margin-top: 10px; margin-left: 30px;">
+            <h2 style="margin-top: 30px; margin-left:650px;">Car World</h2>
+        </div>
+    </div>
+  <div class="container-lx">
+    <div class="row">
+        <div class="col-4 bg-light">
+            <h4>Enter Details</h4>
+            <label for="example1" class="form-label mt-2">Car Brand</label>
+            <input type="cname" class="form-control" id="brand" aria-describedby="nameHelp" placeholder="Car Brand">
+            <label for="example1" class="form-label mt-2">Price</label>
+            <input type="cprice" class="form-control" id="price" aria-describedby="nameHelp" placeholder="Price">
+            <label for="example1" class="form-label mt-2">Key</label>
+            <input class="form-control" id="key" type="text">
+            <button onclick="add()" class="btn btn-outline-success mt-4 ms-5">Store Records</button>
+        </div>
+        <div class="col-4 bg-light">
+            <h4>Enter Key to Retrieve Item</h4>
+            <label for="example1" class="form-label mt-2">Key</label>
+            <input id="searchid" type="text" class="form-control" placeholder="Key">
+            <button type="button" onclick="retrieve()" class="btn btn-outline-primary mt-3 ms-5">Retrieve Records</button>            
+            <div id="result"></div>
+        </div>
+        <div class="col-4 bg-light">
+            <h4>Enter Key to Delete Item</h4>
+            <label for="example1" class="form-label mt-2">Key</label>
+            <input id="delid" type="text" class="form-control" placeholder="Key">
+            <button type="button" onclick="remove()" class="btn btn-outline-danger mt-3 ms-5">Remove Records</button>
+        </div>          
+    </div>
+    <div class="row1">
+        <button class="form-control1 btn-dark mt-5" onclick="removeall()">Clear All Records</button>
+    </div>
+
+</div>   
+    <style>
+        .row{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            margin-left:250px;
+        }
+        .form-control{
+            width: 250px;
+            height: 30px;
+        }
+        .form-label{
+            size: 15px;
+        }
+        h4,h2{
+            color: blue;
+            align-items: center;
+        }
+        .col-4{
+            width:300px;
+            height: 350px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: rgb(129, 115, 115);
+            border-radius: 10px;
+        }
+        .form-control1{
+            width: 980px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .row1{
+            width: 100%;
+            height: 100px;
+            margin-left:270px;
+        }
+        
+        
+       
+    </style>
+</body>
+    <script src="./script.js"></script>
+</html>
